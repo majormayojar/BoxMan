@@ -42,7 +42,7 @@ while keep_going:
                 screen.blit(lvl2,(0,0))
                 screen.blit(character,(a,549))
                 pygame.display.update()
-                if a == 467:
+                if a == 470:
                     a = a - a
                     screen.blit(character,(a,549))
                     pygame.display.update()
