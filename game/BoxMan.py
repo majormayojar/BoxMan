@@ -68,7 +68,11 @@ while keep_going:
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE:
                 b -= 10
-                screen.blit(character,(a,b))
+                screen.blit(character,(a,539))
+                pygame.display.update()
+                time.sleep(3)
+                b += 10
+                screen.blit(character,(a,549))
                 pygame.display.update()
             if event.key == pygame.K_LSHIFT:
                 if c >= 810:
