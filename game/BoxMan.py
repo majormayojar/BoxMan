@@ -44,7 +44,9 @@ while keep_going:
                 screen.blit(character,(a,549))
                 pygame.display.update()
                 if a == 470:
-                    a = a - a
+                    if b == 549:
+                        a = a - a
+                        c = 810
                     pygame.display.update()
                     if c >= 1620:
                         if a == 810:
@@ -53,8 +55,9 @@ while keep_going:
                         screen.blit(character,(a,549))
                         pygame.display.update()
                         if a == 470:
-                            a = a - a
-                            c = 810
+                            if b == 549:
+                                a = a - a
+                                c = 810
                             pygame.display.update()
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_r:
@@ -63,20 +66,17 @@ while keep_going:
                 screen.blit(character,(a,549))
                 pygame.display.update()
             if event.key == pygame.K_SPACE:
-                b -= 10
+                b = 539
                 screen.blit(character,(a,b))
+                pygame.display.update()
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE:
-                b -= 10
-                screen.blit(character,(a,539))
-                pygame.display.update()
-                time.sleep(3)
-                b += 10
-                screen.blit(character,(a,549))
-                pygame.display.update()
+               b = 549
+               screen.blit(character, (a,b))
+               pygame.display.update()
             if event.key == pygame.K_LSHIFT:
                 if c >= 810:
-                    if a == 810:
+                    if a >= 810:
                         a = a - a
                     screen.blit(lvl2,(0,0))
                     screen.blit(character,(a,b))
@@ -84,9 +84,10 @@ while keep_going:
                 if a == 470:
                     if b == 549:
                         a = a - a
+                        c = 810
                     pygame.display.update()
                 a += 27
-                if a == 810:
+                if a>= 810:
                     a = a - a
                 if c >= 1620:
                     if a == 810:
@@ -96,6 +97,7 @@ while keep_going:
                     pygame.display.update()
                     if a == 470:
                         a = a - a
+                        c = 810
                         pygame.display.update()
     
 pygame.quit()
