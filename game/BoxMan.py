@@ -44,21 +44,8 @@ while keep_going:
                 screen.blit(character,(a,549))
                 pygame.display.update()
                 if a == 470:
-                    if b == 549:
-                        a = a - a
-                        c = 810
+                    a = a - a
                     pygame.display.update()
-                    if c >= 1620:
-                        if a == 810:
-                            a = a - a
-                        screen.blit(lvl3,(0,0))
-                        screen.blit(character,(a,549))
-                        pygame.display.update()
-                        if a == 470:
-                            if b == 549:
-                                a = a - a
-                                c = 810
-                            pygame.display.update()
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_r:
                 a = a - a
@@ -66,7 +53,7 @@ while keep_going:
                 screen.blit(character,(a,549))
                 pygame.display.update()
             if event.key == pygame.K_SPACE:
-                b = 539
+                b = 529
                 screen.blit(character,(a,b))
                 pygame.display.update()
         elif event.type == pygame.KEYDOWN:
@@ -82,22 +69,11 @@ while keep_going:
                     screen.blit(character,(a,b))
                     pygame.display.update()
                 if a == 470:
-                    if b == 549:
-                        a = a - a
-                        c = 810
+                    a = a - a
                     pygame.display.update()
                 a += 27
-                if a>= 810:
+                if a >= 810:
                     a = a - a
-                if c >= 1620:
-                    if a == 810:
-                        a = a - a
-                    screen.blit(lvl3,(0,0))
-                    screen.blit(character,(a,549))
                     pygame.display.update()
-                    if a == 470:
-                        a = a - a
-                        c = 810
-                        pygame.display.update()
     
 pygame.quit()
