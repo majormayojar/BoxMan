@@ -35,7 +35,6 @@ while keep_going:
         elif event.type == pygame.MOUSEBUTTONDOWN:
             screen.blit(lvl1, (0,0))
             a += 10
-            b += 10
             c +=10
             if c >= 810:
                 if a == 810:
