@@ -97,3 +97,4 @@ while keep_going:
 
 #Uninitializing pygame    
 pygame.quit()
+#I'm kinda sad about how the line above me was the 99th line so I decided to make some filler.
